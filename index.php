@@ -23,6 +23,7 @@
   <title>Случайный Рубаи Омара Хайяма</title>
   <link rel="icon" href="img/favicon.ico" type="image/x-icon">
   <link rel="stylesheet" type="text/css" href="css/style.css">
+  <meta charset='UTF-8'>
 </head>
 <body>
   <div class='title'>
