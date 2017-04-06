@@ -26,16 +26,23 @@
   <meta charset='UTF-8'>
 </head>
 <body>
-  <div class='title'>
-    Случайный Рубаи Омара Хайама
+  <div id="header">
+    <div class='text' id='title'>
+      Случайный Рубаи Омара Хайама
+    </div>
   </div>
 
-  <div id='rubai'>
-    <div id='text'><?= $rubai ?></div>
-  </div>
+  <div id="other">
+    <div id='rubai-wrapper'>
+      <div id='rubai'><?= $rubai ?></div>
+    </div>
 
-  <div class='title' id='another-one'>
-    <a href=".">Мне нужен ещё один случайный Рубаи</a>
+    <div class='text' id='i-need-another-one'>
+      <a href=".">Мне нужен ещё один случайный Рубаи</a>
+    </div>
+  
+    <div id="hayam-itself">
+    </div>
   </div>
 </body>
 </html>

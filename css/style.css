@@ -1,80 +1,120 @@
-@import url('https://fonts.googleapis.com/css?family=Playfair+Display&subset=cyrillic');
+@import url('https://fonts.googleapis.com/css?family=Oranienbaum&subset=cyrillic');
 
 body {
-  background-color: #F5F5F5;
-  font-family: serif;
+  font-family: 'Oranienbaum', serif;
   cursor: default;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
 }
 
-.title {
+#header {
   display: block;
-  margin: 5% auto;
-  width: 400px;
-  height: 25px;
+  position: relative;
+  top: 0;
+  left: 0;
+  background-image: url("../img/header.jpg");
+  background-repeat: repeat-x;
+  background-position: left bottom;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 20%;
   text-align: center;
+}
+
+#other {
+  width: 100%;
+  height: 80%;
+  background-image: url("../img/bg2.jpg");
+  background-position: left top;
+  box-shadow: 0px -10px 30px 0px rgba(255,255,255,1);
+  text-align: center;
+}
+
+.text {
   font-size: 20px;
 }
 
-#another-one {
-  width: 380px;
-  font-size: 22px;
-  opacity: 0;
-  animation: fadeIn .5s 1s forwards;
+#title {
+  position: absolute;
+  bottom: 0;
+  width: 30%;
+  left: 35%;
+  font-size: 50px;
+  background-color: rgba(255, 255, 255, 0.8);
 }
 
-#another-one > a {
+#i-need-another-one {
+  position: absolute;
+  width: 30%;
+  left: 35%;
+  font-size: 40px;
+  background-color: rgba(157, 144, 133, 0.8);
+  opacity: 0;
+  animation: fadeIn .5s 2s forwards;
+}
+
+#i-need-another-one > a {
   color: black;
   text-decoration: none;
   transition: 1s;
 }
 
-#another-one > a:hover {
-  color: #914D4D;
+#i-need-another-one > a:hover {
+  color: white;
+}
+
+#rubai-wrapper {
+  padding: 30px;
+  text-align: center;
 }
 
 #rubai {
-  display: block;
-  margin: 5% auto;
-  width: 55%;
-  height: 50%;
-  border: 1px solid black;
-  background-color: #FFFFFF;
-  text-align: center;
-  border-radius: 5px;
-  transition: 3s;
-  animation: showUp 1.5s;
-}
-
-#text {
-  font-family: 'Playfair Display', serif;
   display: inline-block;
-  font-size: 25px;
-  margin: 22% auto;
+  padding: 50px;
+  background-color: rgba(157, 144, 133, 0.8);
+  font-size: 40px;
+  animation: showUp 1.8s ease-out;
+  transition: 2s;
 }
 
-/* зачем так делать? а затем! */
 #rubai:hover {
-  color: #E1E1E1;
-  background-color: #393939;
-  border-color: #FFFFFF;
+  color: white;
+}
+
+#hayam-itself {
+  background-image: url("../img/hayam.png");
+  background-size: cover;
+  width: 25%;
+  height: 35%;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  transition: 2s ease-in;
+}
+
+#hayam-itself:hover {
+  bottom: -15%;
+  right: -10%;
 }
 
 @keyframes showUp {
-    from { 
-      margin-top: 15%;
-      opacity: 0; 
-    }
-    to   {
-      margin-top: 5%;
-      opacity: 1; 
-    }
+  from { 
+    margin-top: 15%;
+    opacity: 0; 
+  }
+  to {
+    margin-top: 0;
+    opacity: 1; 
+  }
 }
 
 @keyframes fadeIn {
-    from { 
-      opacity: 0; 
-    }
-    to   {
-      opacity: 1; 
-    }
+  from { 
+    opacity: 0; 
+  }
+  to {
+    opacity: 1; 
+  }
 }
