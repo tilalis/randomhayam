@@ -33,7 +33,6 @@ body {
 }
 
 .text {
-  font-size: 20px;
 }
 
 #title {
@@ -41,7 +40,7 @@ body {
   bottom: 0;
   width: 30%;
   left: 35%;
-  font-size: 50px;
+  font-size: 3em;
   background-color: rgba(255, 255, 255, 0.8);
 }
 
@@ -49,8 +48,11 @@ body {
   position: absolute;
   width: 30%;
   left: 35%;
-  font-size: 40px;
+  font-size: 2.5em;
   background-color: rgba(157, 144, 133, 0.8);
+}
+
+.fade-in {
   opacity: 0;
   animation: fadeIn .5s 2s forwards;
 }
@@ -74,8 +76,7 @@ body {
   display: inline-block;
   padding: 50px;
   background-color: rgba(157, 144, 133, 0.8);
-  font-size: 40px;
-  animation: showUp 1.8s ease-out;
+  font-size: 2.5em;
   transition: 2s;
 }
 
@@ -83,20 +84,73 @@ body {
   color: white;
 }
 
+.show-up {
+  animation: showUp 1.8s ease-out;
+}
+
 #hayam-itself {
   background-image: url("../img/hayam.png");
-  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: right bottom;
+  background-size: contain;
   width: 25%;
   height: 35%;
   position: fixed;
   bottom: 0;
   right: 0;
+  opacity: 0;
   transition: 2s ease-in;
+  animation: fadeIn 2s 2s forwards;
 }
 
 #hayam-itself:hover {
   bottom: -15%;
   right: -10%;
+}
+
+@media only screen and (max-width: 469px) {
+   #title {
+    font-size: 1.6em;
+   }
+
+   #rubai {
+    font-size: 1.8em;
+    padding: 10px;
+   }
+   
+   #i-need-another-one {
+    font-size: 1.5em;
+   }
+}
+
+@media only screen and (max-width: 360px) {
+   #title {
+    font-size: 1.2em;
+   }
+
+   #rubai {
+    font-size: 1.8em;
+    padding: 10px;
+   }
+   
+   #i-need-another-one {
+    font-size: 1.2em;
+   }
+}
+
+@media only screen and (max-width: 320px) {
+   #title {
+    font-size: 1.2em;
+   }
+
+   #rubai {
+    font-size: 1.5em;
+    padding: 10px;
+   }
+   
+   #i-need-another-one {
+    font-size: 1.2em;
+   }
 }
 
 @keyframes showUp {
